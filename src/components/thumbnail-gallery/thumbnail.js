@@ -3,7 +3,7 @@ import React from 'react'
 const Thumbnail = () => {
     return (
         <div style={styles}>
-            Thumbnail
+            
         </div>
     )
 }
