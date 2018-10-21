@@ -5,6 +5,7 @@ export default class ThumbnailGallery extends Component {
         return (
             <div style={thumbnailGalleryStyles}>
 
+                {/* Left Side */}
                 <div>
 
                 </div>
