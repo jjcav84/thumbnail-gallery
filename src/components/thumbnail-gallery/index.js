@@ -4,7 +4,16 @@ export default class ThumbnailGallery extends Component {
     render() {
         return (
             <div style={thumbnailGalleryStyles}>
-                
+
+                <div>
+
+                </div>
+
+                {/* Right Side */}
+                <div>
+
+                </div>
+
             </div>
         )
     }
