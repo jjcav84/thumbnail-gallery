@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ActiveThumbnailWindow from './active-thumbnail-window'
 
 export default class ThumbnailGallery extends Component {
     render() {
@@ -7,7 +8,7 @@ export default class ThumbnailGallery extends Component {
 
                 {/* Left Side */}
                 <div style={{ flex: 1 }}>
-                  Left
+                  <ActiveThumbnailWindow />
                 </div>
 
                 {/* Right Side */}
