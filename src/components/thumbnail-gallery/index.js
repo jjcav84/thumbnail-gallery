@@ -6,13 +6,13 @@ export default class ThumbnailGallery extends Component {
             <div style={thumbnailGalleryStyles}>
 
                 {/* Left Side */}
-                <div>
-
+                <div style={{ flex: 1 }}>
+                  Left
                 </div>
 
                 {/* Right Side */}
-                <div>
-
+                <div style={{ flex: 1 }}>
+                  Right
                 </div>
 
             </div>
@@ -24,5 +24,6 @@ const thumbnailGalleryStyles = {
     background: '#ddd',
     height: '500px',
     width: '1024px',
-    margin: '40px auto'
+    margin: '40px auto',
+    display: 'flex'
 }
