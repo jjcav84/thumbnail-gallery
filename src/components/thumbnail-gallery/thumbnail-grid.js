@@ -1,17 +1,16 @@
 import React from 'react'
 import Thumbnail from './thumbnail'
 
-const ThumbnailGrid = () => {
+const ThumbnailGrid = ({ thumbnails }) => {
     return (
         <div style={styles}>
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
-          <Thumbnail />
+            {
+                thumbnails.map((thumbnail) => {
+                    return (
+                        <Thumbnail />
+                    )
+                })
+            }
         </div>
     )
 }
