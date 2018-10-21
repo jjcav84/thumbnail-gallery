@@ -7,7 +7,10 @@ const ThumbnailGrid = ({ thumbnails }) => {
             {
                 thumbnails.map((thumbnail) => {
                     return (
-                        <Thumbnail />
+                        <Thumbnail
+                          key={thumbnail.imgUrl}
+                          imgUrl-={thumbnail.imgUrl}
+                        />
                     )
                 })
             }
