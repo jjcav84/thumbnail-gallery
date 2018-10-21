@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ActiveThumbnailWindow from './active-thumbnail-window'
+import ThumbnailGrid from './thumbnail-grid'
 
 export default class ThumbnailGallery extends Component {
     render() {
@@ -9,6 +10,7 @@ export default class ThumbnailGallery extends Component {
                 {/* Left Side */}
                 <div style={{ flex: 1 }}>
                   <ActiveThumbnailWindow />
+                  <ThumbnailGrid />
                 </div>
 
                 {/* Right Side */}

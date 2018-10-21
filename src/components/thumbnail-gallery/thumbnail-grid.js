@@ -1,16 +1,16 @@
 import React from 'react'
 
-const ActiveThumbnailWindow = () => {
+const ThumbnailGrid = () => {
     return (
         <div style={styles}>
-
+          ThumbnailGrid
         </div>
     )
 }
 
 const styles = {
-    height: '65%',
+    height: '35%',
     width: '100%',
-    background: '#333'
+    background: 'yellow'
 }
-export default ActiveThumbnailWindow
+export default ThumbnailGrid
