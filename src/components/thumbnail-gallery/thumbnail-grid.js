@@ -8,6 +8,10 @@ const ThumbnailGrid = () => {
           <Thumbnail />
           <Thumbnail />
           <Thumbnail />
+          <Thumbnail />
+          <Thumbnail />
+          <Thumbnail />
+          <Thumbnail />
         </div>
     )
 }
@@ -16,6 +20,7 @@ const styles = {
     height: '35%',
     width: '100%',
     background: 'yellow',
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap'
 }
 export default ThumbnailGrid
