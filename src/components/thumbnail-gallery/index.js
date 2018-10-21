@@ -5,7 +5,8 @@ import axios from 'axios'
 
 export default class ThumbnailGallery extends Component {
     state = {
-        thumbnails: []
+        thumbnails: [],
+        activeIndex: 0
     }
 
     componentDidMount () {
@@ -16,11 +17,11 @@ export default class ThumbnailGallery extends Component {
     }
 
     renderThumbnails = () => {
-        const { thumbnails } = this.state
+        const { thumbnails, activeIndex } = this.state
         if(thumbnails.length) {
             return(
               <ActiveThumbnailWindow
-                activeThumbnail={thumbnails[0]}
+                activeThumbnail={thumbnails[activeIndex]}
               />
             )
         }
