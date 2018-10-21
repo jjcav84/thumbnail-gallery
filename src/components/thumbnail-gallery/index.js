@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import ActiveThumbnailWindow from './active-thumbnail-window'
 import ThumbnailGrid from './thumbnail-grid'
+import axios from 'axios'
 
 export default class ThumbnailGallery extends Component {
+
+    componentDidMount () {
+        axios.get ()
+    }
+
     render() {
         return (
             <div style={thumbnailGalleryStyles}>
