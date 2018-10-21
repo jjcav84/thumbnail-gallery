@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ActiveThumbnailWindow = () => {
+const ActiveThumbnailWindow = ({ activeThumbnail }) => {
     return (
         <div style={styles}>
-
+          <img src={activeThumbnail.imgUrl} />
         </div>
     )
 }

@@ -4,18 +4,37 @@ import ThumbnailGrid from './thumbnail-grid'
 import axios from 'axios'
 
 export default class ThumbnailGallery extends Component {
+    state = {
+        thumbnails: []
+    }
 
     componentDidMount () {
-        axios.get ()
+        axios.get ('https://react-hacker.danzuzevich.com/thumbnails')
+            .then(res => {
+                this.setState({ thumbnails: res.data.thumbnails })
+            })
+    }
+
+    renderThumbnails = () => {
+        const { thumbnails } = this.state
+        if(thumbnails.length) {
+            return(
+              <ActiveThumbnailWindow
+                activeThumbnail={thumbnails[0]}
+              />
+            )
+        }
     }
 
     render() {
+        const { thumbnails } = this.state
+
         return (
             <div style={thumbnailGalleryStyles}>
 
                 {/* Left Side */}
                 <div style={{ flex: 1 }}>
-                  <ActiveThumbnailWindow />
+                    { this.renderThumbnails() }
                   <ThumbnailGrid />
                 </div>
 
