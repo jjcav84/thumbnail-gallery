@@ -15,7 +15,7 @@ export default class ThumbnailGallery extends Component {
 
                 {/* Right Side */}
                 <div style={{ flex: 1 }}>
-                  Right
+                  
                 </div>
 
             </div>
