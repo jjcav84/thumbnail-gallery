@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Thumbnail = ({ imgUrl, handleClick }) => {
+const Thumbnail = ({ imgUrl, handleClick, index }) => {
     return (
         <div style={styles}>
           <img
@@ -11,6 +11,7 @@ const Thumbnail = ({ imgUrl, handleClick }) => {
                   height: '100%'
               }}
               onClick={handleClick}
+              data-index={index}
           />
         </div>
     )
