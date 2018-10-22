@@ -27,8 +27,9 @@ export default class ThumbnailGallery extends Component {
         }
     }
 
-    handleClick = () => {
-        console.log('Hello!')
+    handleClick = (e) => {
+        const newActiveIndex =e.target.getAttribute('data-index')
+        this.setState({ activeIndex: newActiveIndex})
     }
 
     render() {

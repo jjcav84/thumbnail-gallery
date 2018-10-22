@@ -5,12 +5,13 @@ const ThumbnailGrid = ({ thumbnails, handleClick }) => {
     return (
         <div style={styles}>
             {
-                thumbnails.map((thumbnail) => {
+                thumbnails.map((thumbnail, i) => {
                     return (
                         <Thumbnail
                           key={thumbnail.imgUrl}
                           imgUrl={thumbnail.imgUrl}
                           handleClick={handleClick}
+                          index={i}
                         />
                     )
                 })
