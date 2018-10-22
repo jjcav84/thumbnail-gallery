@@ -1,7 +1,7 @@
 import React from 'react'
 import Thumbnail from './thumbnail'
 
-const ThumbnailGrid = ({ thumbnails }) => {
+const ThumbnailGrid = ({ thumbnails, handleClick }) => {
     return (
         <div style={styles}>
             {
@@ -10,6 +10,7 @@ const ThumbnailGrid = ({ thumbnails }) => {
                         <Thumbnail
                           key={thumbnail.imgUrl}
                           imgUrl={thumbnail.imgUrl}
+                          handleClick={handleClick}
                         />
                     )
                 })
@@ -25,4 +26,5 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap'
 }
+
 export default ThumbnailGrid

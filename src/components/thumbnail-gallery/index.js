@@ -27,6 +27,10 @@ export default class ThumbnailGallery extends Component {
         }
     }
 
+    handleClick = () => {
+        console.log('Hello!')
+    }
+
     render() {
         const { thumbnails } = this.state
 
@@ -38,6 +42,7 @@ export default class ThumbnailGallery extends Component {
                     { this.renderThumbnails() }
                   <ThumbnailGrid
                     thumbnails={thumbnails}
+                    handleClick={this.handleClick}
                   />
                 </div>
 
