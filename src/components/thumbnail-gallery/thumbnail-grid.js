@@ -9,7 +9,7 @@ const ThumbnailGrid = ({ thumbnails }) => {
                     return (
                         <Thumbnail
                           key={thumbnail.imgUrl}
-                          imgUrl-={thumbnail.imgUrl}
+                          imgUrl={thumbnail.imgUrl}
                         />
                     )
                 })
