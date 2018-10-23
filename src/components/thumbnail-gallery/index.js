@@ -18,11 +18,35 @@ export default class ThumbnailGallery extends Component {
 
     renderThumbnails = () => {
         const { thumbnails, activeIndex } = this.state
+
         if(thumbnails.length) {
             return(
-              <ActiveThumbnailWindow
-                activeThumbnail={thumbnails[activeIndex]}
-              />
+                <>
+                  <ActiveThumbnailWindow
+                    activeThumbnail={thumbnails[activeIndex]}
+                  />
+
+                  <ThumbnailGrid
+                  thumbnails={thumbnails}
+                  handleClick={this.handleClick}
+                  />
+                </>
+            )
+        }
+        return null
+    }
+
+    renderTextContent = () => {
+        const { thumbnails, activeIndex } = this.state
+
+        if(thumbnails.length) {
+            return (
+                <>
+                    <h1> { thumbnails[activeIndex].title }</h1>
+                    <p>
+                        { thumbnails[activeIndex].bodyText }
+                    </p>
+                </>
             )
         }
     }
@@ -41,15 +65,11 @@ export default class ThumbnailGallery extends Component {
                 {/* Left Side */}
                 <div style={{ flex: 1 }}>
                     { this.renderThumbnails() }
-                  <ThumbnailGrid
-                    thumbnails={thumbnails}
-                    handleClick={this.handleClick}
-                  />
                 </div>
 
                 {/* Right Side */}
                 <div style={{ flex: 1, padding: '40px' }}>
-                 Some Cool Text
+                    { this.renderTextContent()}
                 </div>
 
             </div>
